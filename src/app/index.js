@@ -12,9 +12,7 @@ module.exports = function() {
     app.use(express.static(rootDir('../../assets')));
     app.set('view engine', 'ejs');
 
-    app.get('/', function(req, res) {
-        res.render('index');
-    });
+    app.use('/', require('./routes'));
 
     app.listen(port, () => { 
         console.log(`Express started on ${port} port`)
