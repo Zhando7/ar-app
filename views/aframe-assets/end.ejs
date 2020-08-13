@@ -1,0 +1,38 @@
+<a-assets>
+    <video
+        id="another-vid"
+        src="/videos/asset2.mp4"
+        preload="auto"
+        response-type="arraybuffer"
+        loop
+        crossorigin
+        webkit-playsinline
+        autoplay
+        playsinline
+    ></video>
+</a-assets>
+
+<a-marker
+    type="pattern"
+    preset="custom"
+    url="/markers/marker2.patt"
+    another-videohandler
+    smooth="true"
+    smoothCount="10"
+    smoothTolerance="0.01"
+    smoothThreshold="5"
+    raycaster="objects: .clickable"
+    emitevents="true"
+    cursor="fuse: false; rayOrigin: mouse;"
+    id="markerB"
+>
+    
+    <a-video
+        src="#another-vid"
+        scale="1 1 1"
+        position="0 0.1 0"
+        rotation="-90 0 0"
+        class="clickable"
+        gesture-handler
+    ></a-video>
+</a-marker>
