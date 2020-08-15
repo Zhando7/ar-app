@@ -5,7 +5,7 @@ const app = express();
 const port = 3000;
 
 module.exports = function() {
-    let rootDir = path.join.bind(this, __dirname);
+    var rootDir = path.join.bind(this, __dirname);
 
     app.engine('ejs', require('ejs').__express);
     app.set('views', rootDir('../../views'));
