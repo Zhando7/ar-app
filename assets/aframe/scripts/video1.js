@@ -1,16 +1,14 @@
-AFRAME.registerComponent('videohandler', {
+AFRAME.registerComponent('video1-handler', {
     init: function () {
         var marker = this.el;
-        this.vid = document.querySelector("#vid");
+        this.video = document.querySelector("#video1");
 
         marker.addEventListener('markerFound', function () {
-            this.toggle = true;
-            this.vid.play();
+            this.video.play();
         }.bind(this));
 
         marker.addEventListener('markerLost', function () {
-            this.toggle = false;
-            this.vid.pause();
+            this.video.pause();
         }.bind(this));
     },
 });
