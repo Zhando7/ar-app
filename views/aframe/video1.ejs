@@ -1,22 +1,22 @@
 <a-assets>
     <video
-        id="another-vid"
-        src="/videos/asset2.mp4"
+        id="video1"
+        src="/videos/video1.mp4"
         preload="auto"
+        autoplay="false"
         response-type="arraybuffer"
         loop
         crossorigin
         webkit-playsinline
-        autoplay
         playsinline
     ></video>
 </a-assets>
 
 <a-marker
+    video1-handler
     type="pattern"
     preset="custom"
-    url="/markers/marker2.patt"
-    another-videohandler
+    url="/aframe/patterns/video1.patt"
     smooth="true"
     smoothCount="10"
     smoothTolerance="0.01"
@@ -24,11 +24,10 @@
     raycaster="objects: .clickable"
     emitevents="true"
     cursor="fuse: false; rayOrigin: mouse;"
-    id="markerB"
 >
     
     <a-video
-        src="#another-vid"
+        src="#video1"
         scale="1 1 1"
         position="0 0.1 0"
         rotation="-90 0 0"
